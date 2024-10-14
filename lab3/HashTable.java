@@ -1,6 +1,7 @@
 package lab3;
 
 import java.util.LinkedList;
+@SuppressWarnings("unchecked")
 
 public class HashTable<K, V> {
     private LinkedList<Entry<K, V>>[] table;
@@ -76,13 +77,6 @@ public class HashTable<K, V> {
         }
     }
 
-    public Object getDataAtIndex(K key) {
-        int index = hash(key, countBucket);
-        if (table[index] == null) {
-            return null;
-        }
-        return table[index].size();
-    }
 
     public int getIndex(K key) {
         return hash(key, countBucket);
