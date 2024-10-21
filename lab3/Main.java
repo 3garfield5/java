@@ -30,6 +30,7 @@ public class Main {
         table.remove(1);
 
         System.out.println("Проверим есть ли в таблице значения с ключом 1 - "+table.get(1));
+        System.out.println("Возьмем данные с ключом 6 - "+table.get(6));
         System.out.println("Рассмотрим размер таблицы - "+table.size());
         System.out.println("Проверим пустая ли таблица? - "+table.isEmpty());
 

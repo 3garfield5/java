@@ -1,7 +1,6 @@
 package lab3;
 
 import java.util.LinkedList;
-@SuppressWarnings("unchecked")
 
 public class HashTable<K, V> {
     private LinkedList<Entry<K, V>>[] table;

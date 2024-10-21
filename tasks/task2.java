@@ -163,7 +163,7 @@ public class task2 {
                 }
             }
         }
-    return first + "_" + second;
+        return first + "_" + second;
     }
 
     public static int secondBiggest(int[] array) {
@@ -211,11 +211,12 @@ public class task2 {
     public static int equal(int x, int y, int z) {
         int count = 0;
         if (x == y && y == z) {
-            count = 3;
+            return 3;
         } else if (x == y || y == z || x == z) {
-            count = 2;
+            return 2;
+        } else {
+            return count;
         }
-        return count;
     }
 
     public static boolean isAnagram(String first, String second) {
