@@ -86,7 +86,7 @@ public class task3 {
 
             double discountedPrice = price * (1 - discount / 100.0);
 
-            int finalPrice = Math.max(1, (int) Math.round(discountedPrice));
+            int finalPrice = (int) Math.round(discountedPrice);
 
             discountedItems.add(new String[]{name, String.valueOf(finalPrice)});
         }
@@ -96,7 +96,7 @@ public class task3 {
 
     public static boolean sucsessShoot(int x, int y, int r, int m, int n) {
         double d = Math.sqrt(Math.pow((x - m), 2) + Math.pow((y - n), 2));
-        return !(d > r);
+        return d < r;
     }
 
     public static boolean parityAnalysis(int x) {
@@ -195,18 +195,12 @@ public class task3 {
     }
 
     public static boolean isPrefix(String word, String prefix) {
-
-        if (prefix.endsWith("-")) {
-            prefix = prefix.substring(0, prefix.length() - 1);
-        }
+        prefix = prefix.substring(0, prefix.length() - 1);
         return word.startsWith(prefix);
     }
 
     public static boolean isSuffix(String word, String suffix) {
-
-        if (suffix.startsWith("-")) {
-            suffix = suffix.substring(1);
-        }
+        suffix = suffix.substring(1);
         return word.endsWith(suffix);
     }
 
