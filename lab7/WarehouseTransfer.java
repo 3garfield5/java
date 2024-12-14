@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.concurrent.Semaphore;
 
 public class WarehouseTransfer {
-    private static final int MAX_WEIGHT = 150; // Максимальный вес для одной "отправки"
-    private static final int NUM_WORKERS = 3; // Количество грузчиков
-    private static Semaphore semaphore = new Semaphore(NUM_WORKERS); // Семафор на количество грузчиков
+    private static final int max = 150; // Максимальный вес для одной "отправки"
+    private static final int num_workers= 3; // Количество грузчиков
+    private static Semaphore semaphore = new Semaphore(num_workers); // Семафор на количество грузчиков
     private static List<Integer> warehouse = new ArrayList<>(); // Склад с товарами
     private static int currentWeight = 0; // Текущий вес собранных товаров
     private static final Object lock = new Object();
@@ -15,9 +15,9 @@ public class WarehouseTransfer {
     public static void main(String[] args) {
         for (int i = 1; i < 10; i++) {
             warehouse.add((int) (Math.random() * 100));
-
+            System.out.println("Добавлен товар весом: " + warehouse.getLast());
         }
-        for (int i = 0; i < NUM_WORKERS; i++) {
+        for (int i = 0; i < num_workers; i++) {
             new Thread(new Worker(i + 1)).start();
         }
     }
@@ -43,16 +43,14 @@ public class WarehouseTransfer {
                         }
 
                         itemWeight = warehouse.remove(0);
-                        if (currentWeight + itemWeight > MAX_WEIGHT) {
-                            System.out.println("Грузчик - " + id + " переносит товар на другой склад, потому что набрал максимальный вес.");
+                        if (currentWeight + itemWeight > max) {
+                            System.out.println("Грузчики переносят товар на другой склад, потому что набрали максимальный вес.");
                             goodsTransfer();
                         }
 
                         currentWeight += itemWeight;
                         System.out.println("Грузчик - " + id + " добавил товар весом: " + itemWeight + ". Текущий вес: " + currentWeight);
                     }
-
-                    Thread.sleep(1000);
 
                 } catch (InterruptedException e) {
                     e.printStackTrace();
