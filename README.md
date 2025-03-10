@@ -31,7 +31,16 @@ ISBN.
 Обработка регулярных выражений
 
 # Homework 6 (lab6)
+Коллекции в Java + джейнерики
 
+# Homework 7 (lab7)
+Многопоточность в Java
+
+# Homework 8 (lab8)
+Аннотации + Stream API
+
+# Tasks (tasks)
+Задачи на алгоритмы на Java
 
 
 
