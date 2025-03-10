@@ -1,16 +1,16 @@
-## Курс по Java
+# Курс по Java
 
-# Homework 1 (lab1)
+## Homework 1 (lab1)
 Знакомство с языком
 
-# Homework 2 (lab2)
+## Homework 2 (lab2)
 Работа с принципами ООП
 
 Создание программы по заданию 
 - Базовый класс: Заведение
 - Дочерние классы: Кафе, Магазин, Библиотека
 
-# Homework 3 (lab3)
+## Homework 3 (lab3)
 Работа с HashTable
 
 Создание класса HashTable, который будет реализовывать хэш-
@@ -24,22 +24,22 @@
 Необходимо реализовать операции вставки, поиска и удаления книги по
 ISBN.
 
-# Homework 4 (lab4)
+## Homework 4 (lab4)
 Исключения в Java
 
-# Homework 5 (lab5)
+## Homework 5 (lab5)
 Обработка регулярных выражений
 
-# Homework 6 (lab6)
+## Homework 6 (lab6)
 Коллекции в Java + джейнерики
 
-# Homework 7 (lab7)
+## Homework 7 (lab7)
 Многопоточность в Java
 
-# Homework 8 (lab8)
+## Homework 8 (lab8)
 Аннотации + Stream API
 
-# Tasks (tasks)
+## Tasks (tasks)
 Задачи на алгоритмы на Java
 
 
